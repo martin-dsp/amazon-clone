@@ -1,0 +1,84 @@
+.header {
+    /* belongs to Amazon.. */
+    background-color: #131921;
+    /* To make Header as one-line item */
+    display: flex;
+    align-items: center;
+    /* how to make header sticky on top whether scrolled down */
+    position: sticky;
+    top: 0;
+        /* other contents will not go over the header */
+    z-index: 100;
+}
+
+.header__logo {
+    width: 100px;
+    /* Whether the size gets big or small, the size never changes */
+    object-fit: contain;
+    margin-left: 20px;
+    margin-right: 20px; 
+    margin-top: 18px;
+}
+
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+}
+
+.header__basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__nav {
+    display: flex;
+    /* For when webpage gets big or small */
+    justify-content: space-evenly;
+}
+
+.header__option {
+    /* Two of them together >> make it aligned in a column way */
+    display: flex;
+    flex-direction: column;
+    /* padding >> insdie // margin >> outside */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__optionLineOne {
+    font-size: 10px;
+}
+
+.header__optionLineTwo {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.header__link {
+    color: white;
+    /* Since it's a link!, get rid of underbar for some reasons */
+    text-decoration: none;
+}
+
+.header__search {
+    display: flex;
+    /* flex: 1; >> to take up as much space as possible */
+    /* if '.header__logo' takes 'fex: 1;' with no 'width: 100px;', logo will be fucking big */
+    flex: 1;
+}
+
+.header__searchInput {
+    /* looks goofy by itself */
+    height: 12px;
+    /* to generate space around an element's content */
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.header__searchIcon {
+    padding: 5px;
+    /* !important >> following @material-ui/icons rule~~ lined up perfectly */
+    height: 22px !important;
+    background-color: #cd9042;
+}
